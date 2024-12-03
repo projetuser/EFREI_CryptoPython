@@ -5,22 +5,20 @@ import sqlite3
 
 app = Flask(__name__)
 
-# Clé de chiffrement/déchiffrement
-key = Fernet.generate_key()
-f = Fernet(key)
-
 @app.route('/')
 def hello_world():
     return render_template('hello.html')
 
-@app.route('/encrypt/<string:valeur>')
-def encryptage(valeur):
+@app.route('/encrypt/<string:valeur>/<string:cle>')
+def encryptage(valeur, cle):
+    f = Fernet(cle.encode())  # Utiliser la clé fournie
     valeur_bytes = valeur.encode()  # Conversion str -> bytes
     token = f.encrypt(valeur_bytes)  # Encrypt la valeur
     return f"Valeur encryptée : {token.decode()}"  # Retourne le token en str
 
-@app.route('/decrypt/<string:token>')
-def decryptage(token):
+@app.route('/decrypt/<string:token>/<string:cle>')
+def decryptage(token, cle):
+    f = Fernet(cle.encode())  # Utiliser la clé fournie
     token_bytes = token.encode()  # Conversion str -> bytes
     valeur_bytes = f.decrypt(token_bytes)  # Décryptage
     valeur = valeur_bytes.decode()  # Conversion bytes -> str
