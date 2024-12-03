@@ -19,16 +19,12 @@ def encryptage(valeur):
     token = f.encrypt(valeur_bytes)  # Encrypt la valeur
     return f"Valeur encryptée : {token.decode()}"  # Retourne le token en str
 
-@app.route('/decrypt', methods=['POST'])
-def decryptage():
-    data = request.get_json()
-    token = data.get('token')
-    if token:
-        token_bytes = token.encode()  # Conversion str -> bytes
-        valeur_bytes = f.decrypt(token_bytes)  # Décryptage
-        valeur = valeur_bytes.decode()  # Conversion bytes -> str
-        return jsonify({"valeur_decryptee": valeur})
-    return jsonify({"error": "Token non fourni"}), 400
+@app.route('/decrypt/<string:token>')
+def decryptage(token):
+    token_bytes = token.encode()  # Conversion str -> bytes
+    valeur_bytes = f.decrypt(token_bytes)  # Décryptage
+    valeur = valeur_bytes.decode()  # Conversion bytes -> str
+    return f"Valeur décryptée : {valeur}"  # Retourne la valeur décryptée
 
 if __name__ == "__main__":
     app.run(debug=True)
