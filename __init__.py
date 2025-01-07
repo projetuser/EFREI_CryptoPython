@@ -11,6 +11,14 @@ def hello_world():
 def exercice1():
     return render_template('exercice1.html')
 
+@app.route('/exercice2')
+def exercice2():
+    return render_template('exercice2.html')
+
+@app.route('/exercice3')
+def exercice3():
+    return render_template('exercice3.html')
+
 # Route pour chiffrer une valeur avec une clé privée manuelle
 @app.route('/encrypt/<string:key>/<string:valeur>')
 def encryptage(key, valeur):
