@@ -19,6 +19,10 @@ def exercice2():
 def exercice3():
     return render_template('exercice3.html')
 
+@app.route('/exercice4')
+def exercice4():
+    return render_template('exercice4.html')
+
 # Route pour chiffrer une valeur avec une clé privée manuelle
 @app.route('/encrypt/<string:key>/<string:valeur>')
 def encryptage(key, valeur):
