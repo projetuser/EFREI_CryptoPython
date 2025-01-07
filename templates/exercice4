@@ -1,0 +1,164 @@
+<!DOCTYPE html>
+<html lang="fr">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>CV - Mon Mini Site</title>
+    <style>
+        body {
+            font-family: Arial, sans-serif;
+            line-height: 1.6;
+        }
+        table {
+            width: 80%;
+            margin: 20px auto;
+            border-collapse: collapse;
+        }
+        th, td {
+            padding: 10px;
+        }
+        .bordered-table {
+            border: 1px solid #ccc;
+        }
+        .bordered-table td {
+            border: 1px solid #ccc;
+        }
+        h1, h2 {
+            text-align: center;
+            color: #333;
+        }
+        ul {
+            margin: 0;
+            padding: 0;
+            list-style: disc;
+            padding-left: 20px;
+        }
+        .photo {
+            display: block;
+            margin: 0 auto;
+            width: 150px;
+            height: 150px;
+            border-radius: 50%;
+            object-fit: cover;
+            border: 2px solid #ccc;
+        }
+        .section-title {
+            background-color: #f5f5f5;
+            padding: 10px;
+            text-align: center;
+        }
+    </style>
+</head>
+<body>
+    <h1>Mon Curriculum Vitae</h1>
+
+    <!-- Tableau avec informations standards -->
+    <table class="bordered-table">
+        <tr>
+            <td colspan="2" style="text-align: center;">
+                <img src="photo.jpg" alt="Ma photo" class="photo">
+            </td>
+        </tr>
+        <tr>
+            <td><strong>Nom :</strong></td>
+            <td>John Doe</td>
+        </tr>
+        <tr>
+            <td><strong>Adresse :</strong></td>
+            <td>123, Rue Exemple, 75000 Paris</td>
+        </tr>
+        <tr>
+            <td><strong>Email :</strong></td>
+            <td>johndoe@example.com</td>
+        </tr>
+        <tr>
+            <td><strong>Téléphone :</strong></td>
+            <td>+33 6 12 34 56 78</td>
+        </tr>
+    </table>
+
+    <!-- Formation -->
+    <h2 class="section-title">Formation</h2>
+    <table>
+        <tr>
+            <td width="30%">
+                <ul>
+                    <li>2019-2022</li>
+                </ul>
+            </td>
+            <td width="70%">Master en Informatique, Université de Paris</td>
+        </tr>
+        <tr>
+            <td>
+                <ul>
+                    <li>2016-2019</li>
+                </ul>
+            </td>
+            <td>Licence en Mathématiques et Informatique, Université de Lyon</td>
+        </tr>
+    </table>
+
+    <!-- Expérience professionnelle -->
+    <h2 class="section-title">Expérience professionnelle</h2>
+    <table>
+        <tr>
+            <td width="30%">
+                <ul>
+                    <li>2023-présent</li>
+                </ul>
+            </td>
+            <td width="70%">Développeur Full Stack chez TechCorp</td>
+        </tr>
+        <tr>
+            <td>
+                <ul>
+                    <li>2020-2023</li>
+                </ul>
+            </td>
+            <td>Développeur Frontend chez WebDesignPro</td>
+        </tr>
+    </table>
+
+    <!-- Compétences -->
+    <h2 class="section-title">Compétences</h2>
+    <table>
+        <tr>
+            <td width="30%">
+                <ul>
+                    <li>Programmation</li>
+                </ul>
+            </td>
+            <td width="70%">JavaScript, Python, Java, HTML/CSS</td>
+        </tr>
+        <tr>
+            <td>
+                <ul>
+                    <li>Outils</li>
+                </ul>
+            </td>
+            <td>Git, Docker, Kubernetes, Figma</td>
+        </tr>
+    </table>
+
+    <!-- Informations complémentaires -->
+    <h2 class="section-title">Informations complémentaires</h2>
+    <table>
+        <tr>
+            <td width="30%">
+                <ul>
+                    <li>Langues</li>
+                </ul>
+            </td>
+            <td width="70%">Français (natif), Anglais (courant), Espagnol (intermédiaire)</td>
+        </tr>
+        <tr>
+            <td>
+                <ul>
+                    <li>Loisirs</li>
+                </ul>
+            </td>
+            <td>Voyages, Photographie, Jeux vidéo</td>
+        </tr>
+    </table>
+</body>
+</html>
