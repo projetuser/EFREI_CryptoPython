@@ -7,6 +7,10 @@ app = Flask(__name__)
 def hello_world():
     return render_template('hello.html')
 
+@app.route('/exercice1')
+def exercice1():
+    return render_template('exercice1.html')
+
 # Route pour chiffrer une valeur avec une clé privée manuelle
 @app.route('/encrypt/<string:key>/<string:valeur>')
 def encryptage(key, valeur):
