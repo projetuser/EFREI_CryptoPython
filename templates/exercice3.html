@@ -1,1 +1,61 @@
+<!DOCTYPE html>
+<html lang="fr">
+<head>
+    <meta charset="UTF-8">
+    <title>Formulaire d'inscription</title>
+</head>
+<body>
+    <h2>Formulaire d'inscription</h2>
+    <form action="traitement.php" method="post">
+        <!-- Champ pour le pseudo -->
+        <label for="pseudo">Pseudo :</label><br>
+        <input type="text" id="pseudo" name="pseudo" required><br><br>
+
+        <!-- Champ pour le mot de passe -->
+        <label for="password">Mot de passe :</label><br>
+        <input type="password" id="password" name="password" required><br><br>
+
+        <!-- Champ pour ressaisir le mot de passe -->
+        <label for="confirm_password">Confirmez votre mot de passe :</label><br>
+        <input type="password" id="confirm_password" name="confirm_password" required><br><br>
+
+        <!-- OS préféré -->
+        <label>OS préféré :</label><br>
+        <input type="radio" id="windows_xp" name="os" value="Windows XP" required>
+        <label for="windows_xp">Windows XP</label><br>
+        <input type="radio" id="windows_vista" name="os" value="Windows Vista">
+        <label for="windows_vista">Windows Vista</label><br>
+        <input type="radio" id="macos" name="os" value="MacOS X">
+        <label for="macos">MacOS X</label><br>
+        <input type="radio" id="linux" name="os" value="Linux">
+        <label for="linux">Linux</label><br>
+        <input type="radio" id="autre" name="os" value="Autre">
+        <label for="autre">Autre</label><br><br>
+
+        <!-- Cases à cocher -->
+        <label>Vous possédez :</label><br>
+        <input type="checkbox" id="desktop" name="device[]" value="Ordinateur de bureau">
+        <label for="desktop">Un ordinateur de bureau</label><br>
+        <input type="checkbox" id="laptop" name="device[]" value="Portable">
+        <label for="laptop">Un portable</label><br>
+        <input type="checkbox" id="netbook" name="device[]" value="Netbook">
+        <label for="netbook">Un netbook</label><br>
+        <input type="checkbox" id="tablet" name="device[]" value="Tablette">
+        <label for="tablet">Une tablette (Pad)</label><br><br>
+
+        <!-- Profession -->
+        <label for="profession">Votre profession :</label><br>
+        <select id="profession" name="profession" required>
+            <option value="Chômeur">Chômeur</option>
+            <option value="Etudiant">Etudiant</option>
+            <option value="Fonctionnaire">Fonctionnaire</option>
+            <option value="Privé">Privé</option>
+            <option value="Retraité">Retraité</option>
+        </select><br><br>
+
+        <!-- Bouton Inscrire -->
+        <button type="submit">Inscrire</button>
+    </form>
+</body>
+</html>
 
