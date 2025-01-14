@@ -35,6 +35,10 @@ def Maison():
 def Valet():
     return render_template('Valet.html')
 
+@app.route('/Chenille')
+def Chenille():
+    return render_template('Chenille.html')
+
 # Route pour chiffrer une valeur avec une clé privée manuelle
 @app.route('/encrypt/<string:key>/<string:valeur>')
 def encryptage(key, valeur):
