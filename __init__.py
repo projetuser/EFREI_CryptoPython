@@ -42,7 +42,11 @@ def Chenille():
 @app.route('/jeu_de_des')
 def jeu_de_des():
     return render_template('jeu_de_des.html')
-
+    
+@app.route('/bibliotheque_images')
+def bibliotheque_images():
+    return render_template('bibliotheque_images.html')
+    
 # Route pour chiffrer une valeur avec une clé privée manuelle
 @app.route('/encrypt/<string:key>/<string:valeur>')
 def encryptage(key, valeur):
