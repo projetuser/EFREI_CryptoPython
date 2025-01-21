@@ -2,10 +2,6 @@
 <head>
 <script>
 
-document.getElementById('img1').style.display="None";
-document.getElementById('img2').style.display="None";
-document.getElementById('img3').style.display="None";
-
 function image1(){
 	if(document.getElementById('1').checked){
 	document.getElementById('img1').style.display="Block";
@@ -38,6 +34,11 @@ function image3(){
 <img id="img1" src="{{ url_for('static', filename='images/image1.jpg') }}" alt="Logo">
 <img id="img2" src="{{ url_for('static', filename='images/image2.jpg') }}" alt="Logo">
 <img id="img3" src="{{ url_for('static', filename='images/image3.jpg') }}" alt="Logo">
-
+	
+<script>
+document.getElementById('img1').style.display="None";
+document.getElementById('img2').style.display="None";
+document.getElementById('img3').style.display="None";
+</script>
 </body>
 </html>
