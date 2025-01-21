@@ -20,11 +20,9 @@ function controler(){
 
 function controler(){
 	if(document.getElementById('1').checked){
-			alert("static/images/image1.jpg");
-		}
-	else{alert("Bouton option NON coché");}		
+	document.getElementById('img1').style.display="Block";
 }
-
+}
 function controler(){
 	if(document.getElementById('2').checked){
 			alert("Bouton option coché");
@@ -63,6 +61,9 @@ function controler(){
 <button onclick="controler()">Check</button>
 <hr/>
 
+<img id="img1" src="{{ url_for('static', filename='images/image1.png') }}" alt="Logo">
+<img id="img2" src="{{ url_for('static', filename='images/image2.png') }}" alt="Logo">
+<img id="img3" src="{{ url_for('static', filename='images/image3.png') }}" alt="Logo">
 
 </body>
 </html>
