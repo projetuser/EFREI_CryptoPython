@@ -18,24 +18,24 @@ function controler(){
 	else{alert("Bouton option NON coché");}		
 }
 
-function controler(){
+function image1(){
 	if(document.getElementById('1').checked){
 	document.getElementById('img1').style.display="Block";
 	}
-	else document.getElementById('').style.display="None";
+	else document.getElementById('img1').style.display="None";
 }
-function controler(){
+function image2(){
 	if(document.getElementById('2').checked){
-	document.getElementById('').style.display="Block";
+	document.getElementById('img2').style.display="Block";
 	}
-	else document.getElementById('').style.display="None";
+	else document.getElementById('img2').style.display="None";
 }
 
-function controler(){
+function image3(){
 	if(document.getElementById('3').checked){
 	document.getElementById('img3').style.display="Block";
 	}
-	else document.getElementById('DuTexte').style.display="None";
+	else document.getElementById('img3').style.display="None";
 }
 
 </script>
@@ -55,11 +55,11 @@ function controler(){
 <hr/>
 <h3>Images à afficher :</h3>
 <p>Image 1<input type="checkbox" id="1"></p>
-<button onclick="controler()">Check</button>
+<button onclick="image1()">Check</button>
 <p>Image 2<input type="checkbox" id="2"></p>
-<button onclick="controler()">Check</button>
+<button onclick="image2()">Check</button>
 <p>Image 3<input type="checkbox" id="3"></p>
-<button onclick="controler()">Check</button>
+<button onclick="image3()">Check</button>
 <hr/>
 
 <img id="img1" src="{{ url_for('static', filename='images/image1.png') }}" alt="Logo">
