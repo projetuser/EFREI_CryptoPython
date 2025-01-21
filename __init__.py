@@ -39,6 +39,10 @@ def Valet():
 def Chenille():
     return render_template('Chenille.html')
 
+@app.route('/jeu_de_des')
+def jeu_de_des():
+    return render_template('jeu_de_des')
+
 # Route pour chiffrer une valeur avec une clé privée manuelle
 @app.route('/encrypt/<string:key>/<string:valeur>')
 def encryptage(key, valeur):
