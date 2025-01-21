@@ -6,23 +6,6 @@ document.getElementById('img1').style.display="None";
 document.getElementById('img2').style.display="None";
 document.getElementById('img3').style.display="None";
 
-function affichage(){
-	alert("Tout es OK !");
-}
-function cacher(){
-	document.getElementById('DuTexte').style.display="None";
-}
-function presenter(){
-	document.getElementById('DuTexte').style.display="Block";
-}
-
-function controler(){
-	if(document.getElementById('Control').checked){
-			alert("static/images/image1.jpg");
-		}
-	else{alert("Bouton option NON coché");}		
-}
-
 function image1(){
 	if(document.getElementById('1').checked){
 	document.getElementById('img1').style.display="Block";
@@ -46,18 +29,6 @@ function image3(){
 </script>
 </head>
 <body>
-<h1>Mes outils</h1>
-<hr/>
-<h2>Boite de dialogue</h2>
-<button onclick="affichage()">Afficher</button>
-<hr/>
-<p id="DuTexte">Ma phrase de texte</p>
-<button onclick="presenter()">Presenter</button>
-<button onclick="cacher()">Cacher</button>
-<hr/>
-<p>Option<input type="checkbox" id="Control"></p>
-<button onclick="controler()">Check</button>
-<hr/>
 <h3>Images à afficher :</h3>
 <p>Image 1<input onclick="image1()" type="checkbox" id="1"></p>
 <p>Image 2<input onclick="image2()" type="checkbox" id="2"></p>
