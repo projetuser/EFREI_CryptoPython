@@ -3,17 +3,20 @@
 <script>
 let loadedChamber = null; // Variable pour stocker le numéro de la chambre chargée
 let redCirclesCount = 0; 
-
+let gamePlayed = false;
+    
 function lancer() {
     loadedChamber = Math.ceil(Math.random() * 6);
     alert("Le barillet tourne... Chambre chargée : " + loadedChamber);
     console.log("Chambre chargée :", loadedChamber);
+    if (redCirclesCount === 0) {alert("Vous devez sélectionner des cercles rouges avant de jouer !");return;}
+    if (gamePlayed) {alert("Vous devez réinitialiser le jeu avant de jouer à nouveau !");return;}
     if(document.getElementById("Br" + loadedChamber).style.fill=="red") {document.getElementById("Br" + loadedChamber).style.fill="blue"; alert("Perdu");}
     else if (redCirclesCount == 1) {alert("Vous gagnez 10.000€");}
     else if (redCirclesCount == 2) {alert("Vous gagnez 100.000€");}
     else if (redCirclesCount == 3) {alert("Vous gagnez 1.000.000€");}
     else{document.getElementById("Br" + loadedChamber).style.fill="blue";}
-    reset();
+    gamePlayed = true;
 }
 
 
