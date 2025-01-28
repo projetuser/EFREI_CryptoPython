@@ -1,11 +1,12 @@
 </html>
 <head>
 <script>
+let loadedChamber = null; // Variable pour stocker le numéro de la chambre chargée
+
 function lancer() {
-    alert("Le barillet tourne...");
-    loadedChamber = Math.ceil(Math.random() * 6); // Randomly load a chamber
-    console.log("Chamber loaded:", loadedChamber); // Debugging purpose
-}
+    loadedChamber = Math.ceil(Math.random() * 6);
+    alert("Le barillet tourne... Chambre chargée : " + loadedChamber);
+    console.log("Chambre chargée :", loadedChamber);
 
 
 function chambre(number){
