@@ -46,6 +46,10 @@ def jeu_de_des():
 @app.route('/bibliotheque_images')
 def bibliotheque_images():
     return render_template('bibliotheque_images.html')
+
+@app.route('/roulette_russe')
+def bibliotheque_images():
+    return render_template('roulette_russe.html')
     
 # Route pour chiffrer une valeur avec une clé privée manuelle
 @app.route('/encrypt/<string:key>/<string:valeur>')
