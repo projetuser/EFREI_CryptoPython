@@ -12,10 +12,9 @@ function lancer() {
     alert("Le barillet tourne... Chambre chargée : " + loadedChamber);
     console.log("Chambre chargée :", loadedChamber);
     if(document.getElementById("Br" + loadedChamber).style.fill=="red") {document.getElementById("Br" + loadedChamber).style.fill="blue"; alert("Perdu");}
-    else if (redCirclesCount == 1) {alert("Vous gagnez 10.000€");}
-    else if (redCirclesCount == 2) {alert("Vous gagnez 100.000€");}
-    else if (redCirclesCount == 3) {alert("Vous gagnez 1.000.000€");}
-    else{document.getElementById("Br" + loadedChamber).style.fill="blue";}
+    else if (redCirclesCount == 1) {document.getElementById("Br" + loadedChamber).style.fill="blue"; alert("Vous gagnez 10.000€");}
+    else if (redCirclesCount == 2) {document.getElementById("Br" + loadedChamber).style.fill="blue"; alert("Vous gagnez 100.000€");}
+    else if (redCirclesCount == 3) {document.getElementById("Br" + loadedChamber).style.fill="blue"; alert("Vous gagnez 1.000.000€");}
     gamePlayed = true;
 }
 
