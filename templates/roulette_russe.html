@@ -2,6 +2,7 @@
 <head>
 <script>
 let loadedChamber = null; // Variable pour stocker le numéro de la chambre chargée
+let redCirclesCount = 0; 
 
 function lancer() {
     loadedChamber = Math.ceil(Math.random() * 6);
@@ -14,8 +15,15 @@ function lancer() {
 
 function chambre(number){
           alert("chambre" + number);
-          document.getElementById("Br" + number).style.fill="red";
-          if(document.getElementById("Br" + loadedChamber).style.fill=="red")
+          circle = document.getElementById("Br" + number);
+          if (circle.style.fill === "red") {
+          circle.style.fill = "gray";
+          redCirclesCount--;
+            } else if (redCirclesCount < 3) {
+          circle.style.fill = "red";
+          redCirclesCount++;
+            } else {
+          alert("Vous ne pouvez sélectionner que 3 cercles rouges au maximum.");}
 }
 
 </script>
