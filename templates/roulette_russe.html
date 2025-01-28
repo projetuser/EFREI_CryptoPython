@@ -7,6 +7,8 @@ function lancer() {
     loadedChamber = Math.ceil(Math.random() * 6);
     alert("Le barillet tourne... Chambre chargée : " + loadedChamber);
     console.log("Chambre chargée :", loadedChamber);
+    if(document.getElementById("Br"+Val).style.fill=="red"){alert("Perdu");}
+    else{alert("Gagné");}
 }
 
 
