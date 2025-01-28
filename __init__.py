@@ -48,7 +48,7 @@ def bibliotheque_images():
     return render_template('bibliotheque_images.html')
 
 @app.route('/roulette_russe')
-def bibliotheque_images():
+def roulette_russe():
     return render_template('roulette_russe.html')
     
 # Route pour chiffrer une valeur avec une clé privée manuelle
