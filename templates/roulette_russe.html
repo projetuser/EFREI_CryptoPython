@@ -29,6 +29,17 @@ function chambre(number){
           alert("Vous ne pouvez sélectionner que 3 cercles rouges au maximum.");}
 }
 
+function reset() {
+    for (let i = 1; i <= 6; i++) {
+        document.getElementById("Br" + i).style.fill = "gray";
+    }
+    document.getElementById("Br" + loadedChamber).style.fill = "gray";
+    redCirclesCount = 0;
+    loadedChamber = null;
+    console.log("Réinitialisation complète.");
+
+}
+
 </script>
 
 
@@ -48,6 +59,7 @@ function chambre(number){
 </svg>
 
 <button onclick="lancer()">Jouer</button>
+<button onclick="reset()">Reset</button>
 
 </body>
 </html>
